@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221030 22:28:34.523" rpa="false" schemaversion="3">
+<suite id="s1" name="EX Keyword Argumentos" source="C:\API_teste\API-Automatizada-com-Robot\Resource\EX_Keyword_Argumentos.robot">
+<test id="s1-t1" name="Imprimindo um e-mail customizado e aleatório" line="8">
+<kw name="Criar e-mail customizado e aleatório">
+<var>${EMAIL_CRIADO}</var>
+<arg>${PESSOA.nome}</arg>
+<arg>${PESSOA.sobrenome}</arg>
+<kw name="Generate Random String" library="String">
+<var>${ALEATORIA}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20221030 22:28:34.560" level="INFO">${ALEATORIA} = XDTAgRaN</msg>
+<status status="PASS" starttime="20221030 22:28:34.560" endtime="20221030 22:28:34.560"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${EMAIL_FINAL}</var>
+<arg>${NOME}${SOBRENOME}${ALEATORIA}@testerobot.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221030 22:28:34.561" level="INFO">${EMAIL_FINAL} = MayFernandesXDTAgRaN@testerobot.com</msg>
+<status status="PASS" starttime="20221030 22:28:34.560" endtime="20221030 22:28:34.561"/>
+</kw>
+<msg timestamp="20221030 22:28:34.561" level="INFO">${EMAIL_CRIADO} = MayFernandesXDTAgRaN@testerobot.com</msg>
+<status status="PASS" starttime="20221030 22:28:34.558" endtime="20221030 22:28:34.561"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMAIL_CRIADO}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221030 22:28:34.561" endtime="20221030 22:28:34.562"/>
+</kw>
+<status status="PASS" starttime="20221030 22:28:34.557" endtime="20221030 22:28:34.562"/>
+</test>
+<status status="PASS" starttime="20221030 22:28:34.525" endtime="20221030 22:28:34.564"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="EX Keyword Argumentos">EX Keyword Argumentos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
